@@ -1,26 +1,29 @@
-/* Reset */
-* {
-    margin: 0;
-    padding: 0;
+/* Fonts */
+@font-face {
+    font-family: 'Quicksand';
+    src: url(../font/quicksand/quicksand.ttf)  format('truetype');
+}
+@font-face {
+    font-family: 'Intro';
+    src: url(../font/quicksand/Quicksand_Bold-webfont.ttf)  format('truetype');
 }
 
-/* Slider */
-/* #slider {
-    width: 100vw;
-    height: 500px;
-    position: relative;
-    overflow: hidden;
-} */
+/* Header */
+header{
+    width:100%;
+    height:80px;
+    background:#222;
+}
 
 body{
-  overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 #slider{
-  position: relative;
-  display: grid;
-  grid-template-columns: 100vw;
-  grid-template-rows: 500px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: 500px;
 }
 
 .slides {
@@ -33,12 +36,13 @@ body{
 }
 
 img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* Legend */
+/* Esto crea la barra diagonal semitransparente */
 .legend {
     border: 500px solid transparent;
     border-left: 800px solid rgba(52, 73, 94, 0.7);
@@ -81,27 +85,28 @@ img {
 }
 
 /* Switch */
+/* Esto crea los 4 puntos para la paginación */
 .switch {
     width: 120px;
     height: 10px;
+    display: flex;
     position: absolute;
     bottom: 50px;
     z-index: 99;
     left: 30px;
 }
-.switch {
-    display: flex;
-}
+
 .switch > a {
     width: 10px;
     height: 10px;
     border-radius: 50%;
     background: #333;
     margin-right: 5px;
-    cursor: pointer;
+    cursor: default;
 }
 
-.on {
+/* Esto controla la animación para paginar (el punto naranja) */
+.animacionPaginacion {
     width: 100%;
     height: 100%;
     border-radius: 50%;
@@ -178,7 +183,7 @@ img {
 }
 
 /* bolita naranja */
-@keyframes on {
+@keyframes animacionPaginacion {
     0%,
     100% {
         transform: translateX(0);
