@@ -7,10 +7,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Título -->
         <title>Pure CSS3 Slider</title>
-        <!-- Reset -->
-        <link rel="stylesheet" href="css/reset.css">
         <!-- Normalize -->
         <link rel="stylesheet" href="css/normalize.css">
+        <!-- Reset -->
+        <link rel="stylesheet" href="css/reset.css">
+        
 
         <link rel="stylesheet" href="css/estilos.css" />
     </head>
@@ -21,16 +22,16 @@
         </header>
 
         <!-- Slider -->
-        <div id="slider">
-            <div class="slides">
+        <div class="container">
+            <div class="carrusel">
 
             <!-- Slider 01 -->
                 <div class="slider">
-                    <div class="legend"></div>
-                    <div class="content">
-                        <div class="content-txt">
-                            <h1>SLIDER 01</h1>
-                            <h2>
+                    <div class="slider__triangulo"></div>
+                    <div class="slider__content">
+                        <div class="contentTexto">
+                            <h1 class="contentTexto__titulo">SLIDER 01</h1>
+                            <h2 class="contentTexto__parrafo">
                                 Nam ultrices pellentesque facilisis. In semper
                                 tellus mollis nisl pulvinar vitae vulputate
                                 lorem consequat. Fusce odio tortor, pretium sit
@@ -38,16 +39,31 @@
                             </h2>
                         </div>
                     </div>
-                    <img src="img/1.jpg" />
+                    <picture>
+                        <!-- Desktop -->
+                        <source srcset="
+                                ./img/escritorio@1x.webp 1x,
+                                ./img/escritorio@2x.webp 2x"
+                        />
+                        <img src="" alt="Imagen escritorio" />
+                    </picture>
+
                 </div>
                 
+
+                
+
+
+
+
+
                 <!-- Slider 02 -->
                 <div class="slider">
-                    <div class="legend"></div>
-                    <div class="content">
-                        <div class="content-txt">
-                            <h1>SLIDER 02</h1>
-                            <h2>
+                    <div class="slider__triangulo"></div>
+                    <div class="slider__content">
+                        <div class="contentTexto">
+                            <h1 class="contentTexto__titulo">SLIDER 02</h1>
+                            <h2 class="contentTexto__parrafo">
                                 Nam ultrices pellentesque facilisis. In semper
                                 tellus mollis nisl pulvinar vitae vulputate
                                 lorem consequat. Fusce odio tortor, pretium sit
@@ -56,15 +72,22 @@
                         </div>
                     </div>
 
-                    <img src="img/2.jpg" />
+                    <picture>
+                        <!-- Desktop -->
+                        <source srcset="
+                                ./img/maquina@1x.webp 1x,
+                                ./img/maquina@2x.webp 2x"
+                        />
+                        <img src="" alt="Imagen maquina escribir" />
+                    </picture>
                 </div>
                 <!-- Slider 03 -->
                 <div class="slider">
-                    <div class="legend"></div>
-                    <div class="content">
-                        <div class="content-txt">
-                            <h1>SLIDER 03</h1>
-                            <h2>
+                    <div class="slider__triangulo"></div>
+                    <div class="slider__content">
+                        <div class="contentTexto">
+                            <h1 class="contentTexto__titulo">SLIDER 03</h1>
+                            <h2 class="contentTexto__parrafo">
                                 Nam ultrices pellentesque facilisis. In semper
                                 tellus mollis nisl pulvinar vitae vulputate
                                 lorem consequat. Fusce odio tortor, pretium sit
@@ -72,18 +95,25 @@
                             </h2>
                         </div>
                     </div>
-
-                    <img src="img/3.jpg" />
+                    
+                    <picture>
+                        <!-- Desktop -->
+                        <source srcset="
+                                ./img/escribir@1x.webp 1x,
+                                ./img/escribir@2x.webp 2x"
+                        />
+                        <img src="" alt="Imagen escribir escritorio" />
+                    </picture>
                 </div>
-
+            </div>
+            <!-- Bolitas -->
             <section class="switch">
                 <a href="#">
-                    <div class="animacionPaginacion"></div>
+                    <div class="on"></div>
                 </a>
                 <a href="#"></a>
                 <a href="#"></a>
             </section>
         </div>
-
     </body>
 </html>

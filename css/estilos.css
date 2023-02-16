@@ -8,28 +8,18 @@
     src: url(../font/quicksand/Quicksand_Bold-webfont.ttf)  format('truetype');
 }
 
-/* Header */
-header{
-    width:100%;
-    height:80px;
-    background:#222;
-}
 
-body{
-    overflow-x: hidden;
-}
-
-#slider{
+.container{
     position: relative;
     display: grid;
     grid-template-columns: 100vw;
     grid-template-rows: 500px;
 }
 
-.slides {
+.carrusel {
     width: 400%;
     display: flex;
-    animation: slide 30s infinite;
+    animation: slide 15s infinite;
 }
 .slider {
     width: 25%;
@@ -41,9 +31,15 @@ img {
     object-fit: cover;
 }
 
+picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 /* Legend */
 /* Esto crea la barra diagonal semitransparente */
-.legend {
+.slider__triangulo {
     border: 500px solid transparent;
     border-left: 800px solid rgba(52, 73, 94, 0.7);
     border-bottom: 0;
@@ -52,21 +48,21 @@ img {
 }
 
 /* Contents */
-.content {
+.slider__content {
     width: 100%;
     height: 100%;
     display: flex;
     position: absolute;
     overflow: hidden;
 }
-.content-txt {
+.contentTexto {
     width: 400px;
     height: 150px;
     position: relative;
     top: 300px;
-    animation: content-s 7.5s infinite;
+    animation: content-s 5s infinite;
 }
-.content-txt h1 {
+.contentTexto__titulo{
     font-family: Intro;
     font-size: 24px;
     color: #fff;
@@ -74,7 +70,7 @@ img {
     transform: translateX(30px);
     padding-bottom: 10px;
 }
-.content-txt h2 {
+.contentTexto__parrafo {
     font-family: Quicksand;
     font-weight: normal;
     font-size: 14px;
@@ -96,6 +92,7 @@ img {
     left: 30px;
 }
 
+
 .switch > a {
     width: 10px;
     height: 10px;
@@ -106,13 +103,13 @@ img {
 }
 
 /* Esto controla la animación para paginar (el punto naranja) */
-.animacionPaginacion {
+.on {
     width: 100%;
     height: 100%;
     border-radius: 50%;
     background: #f39c12;
     position: relative;
-    animation: on 30s infinite;
+    animation: on 15s infinite;
 }
 
 /* Animation */
@@ -122,26 +119,20 @@ img {
     100% {
         transform: translateX(0%);
     }
-    21% {
+    31% {
         transform: translateX(0%);
     }
-    25% {
+    35% {
         transform: translateX(-25%);
     }
-    46% {
+    61% {
         transform: translateX(-25%);
     }
-    50% {
+    65% {
         transform: translateX(-50%);
-    }
-    71% {
-        transform: translateX(-50%);
-    }
-    75% {
-        transform: translateX(-75%);
     }
     96% {
-        transform: translateX(-75%);
+        transform: translateX(-50%);
     }
 }
 
@@ -183,30 +174,27 @@ img {
 }
 
 /* bolita naranja */
-@keyframes animacionPaginacion {
+@keyframes on {
     0%,
     100% {
         transform: translateX(0);
     }
-    21% {
+    31% {
         transform: translateX(0);
     }
-    25% {
+    35% {
         transform: translateX(15px);
     }
-    46% {
+    61% {
         transform: translateX(15px);
     }
-    50% {
+    65% {
         transform: translateX(30px);
-    }
-    71% {
-        transform: translateX(30px);
-    }
-    75% {
-        transform: translateX(45px);
     }
     96% {
-        transform: translateX(45px);
+        transform: translateX(30px);
     }
 }
+
+
+
